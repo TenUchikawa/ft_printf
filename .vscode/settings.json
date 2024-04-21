@@ -8,7 +8,8 @@
     "string.h": "c",
     "get_next_line.h": "c",
     "unistd.h": "c",
-    "printf.h": "c"
+    "printf.h": "c",
+    "ft_printf.h": "c"
   },
   // disable copilot
   "github.copilot.enable": {
