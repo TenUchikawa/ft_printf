@@ -6,7 +6,7 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 22:08:03 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/04/22 04:24:22 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2024/04/22 13:42:31 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,15 @@ int	ft_printstr(char *str)
 {
 	if (!str)
 	{
-		write(1, "(null)", 6);
-		return (6);
+		if (0 <= write(1, "(null)", 6))
+			return (6);
+		else
+			return (-2147483648);
 	}
-	write(1, str, ft_strlen(str));
-	return (ft_strlen(str));
+	if (0 <= write(1, str, ft_strlen(str)))
+		return (ft_strlen(str));
+	else
+		return (-2147483648);
 }
 
 int	ft_printnbr(int nbr)

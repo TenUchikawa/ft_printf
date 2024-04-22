@@ -6,7 +6,7 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 22:08:03 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/04/22 04:17:56 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2024/04/22 13:42:31 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 int	ft_printchar(int c)
 {
-	write(1, &c, 1);
-	return (1);
+	if (0 <= write(1, &c, 1))
+		return (1);
+	else
+		return (-2147483648);
 }

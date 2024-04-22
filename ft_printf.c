@@ -6,7 +6,7 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 22:08:03 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/04/22 04:29:35 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2024/04/22 13:39:23 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ int	ft_formats(va_list args, const char format)
 		printed_chars += ft_print_hex(va_arg(args, unsigned int), format);
 	else if (format == '%')
 		printed_chars += ft_printpercent();
+	if (printed_chars < 0)
+		return (-2147483648);
 	return (printed_chars);
 }
 
@@ -49,6 +51,8 @@ int	ft_printf(const char *format, ...)
 			printed_chars += ft_formats(args, format[++i]);
 		else
 			printed_chars += ft_printchar(format[i]);
+		if (printed_chars < 0)
+			return (-1);
 		i++;
 	}
 	return (printed_chars);
