@@ -6,7 +6,7 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 22:08:03 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/04/26 22:28:02 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2024/04/26 22:28:35 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,7 @@ int	ft_printf(const char *format, ...)
 	while (format[i])
 	{
 		if (format[i] == '%')
-		{
 			tmp = ft_formats(args, format[++i]);
-		}
 		else
 			tmp = ft_printchar(format[i]);
 		if (tmp >= 0)
