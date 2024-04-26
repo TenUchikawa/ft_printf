@@ -6,7 +6,7 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 22:07:55 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/04/22 04:27:08 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2024/04/26 21:16:09 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,10 @@ int		ft_print_hex(unsigned int num, const char format);
 int		ft_printpercent(void);
 int		ft_printnbr(int nbr);
 size_t	ft_strlen(const char *s);
-void	ft_put_ptr(unsigned long long num, int is_lower);
+int		ft_put_ptr(unsigned long long num, int is_lower);
 int		ft_ptr_len(unsigned long long num);
 
-// int		ft_putstr(char *str);
 char	*ft_itoa(int n);
 char	*ft_uitoa(unsigned int n);
-// int		ft_num_len(unsigned int num);
-// void	ft_put_hex(unsigned int num, const char format);
-// int		ft_hex_len(unsigned int num);
 
 #endif

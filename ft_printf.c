@@ -6,7 +6,7 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 22:08:03 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/04/22 13:39:23 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2024/04/26 21:07:28 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_formats(va_list args, const char format)
 	else if (format == '%')
 		printed_chars += ft_printpercent();
 	if (printed_chars < 0)
-		return (-2147483648);
+		return (-1);
 	return (printed_chars);
 }
 
