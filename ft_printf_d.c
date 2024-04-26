@@ -6,7 +6,7 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 22:08:03 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/04/26 21:18:51 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2024/04/26 21:39:47 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,11 @@ int	ft_printnbr(int nbr)
 	char	*str;
 
 	str = ft_itoa(nbr);
+	if (!str)
+	{
+		free(str);
+		return (-1);
+	}
 	printed_chars = ft_printstr(str);
 	free(str);
 	return (printed_chars);
