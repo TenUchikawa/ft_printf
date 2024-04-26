@@ -6,7 +6,7 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 22:08:03 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/04/26 21:07:28 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2024/04/26 22:28:02 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ int	ft_printf(const char *format, ...)
 {
 	int		i;
 	int		printed_chars;
+	int		tmp;
 	va_list	args;
 
 	i = 0;
@@ -48,10 +49,14 @@ int	ft_printf(const char *format, ...)
 	while (format[i])
 	{
 		if (format[i] == '%')
-			printed_chars += ft_formats(args, format[++i]);
+		{
+			tmp = ft_formats(args, format[++i]);
+		}
 		else
-			printed_chars += ft_printchar(format[i]);
-		if (printed_chars < 0)
+			tmp = ft_printchar(format[i]);
+		if (tmp >= 0)
+			printed_chars += tmp;
+		else
 			return (-1);
 		i++;
 	}
