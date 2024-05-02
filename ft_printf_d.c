@@ -6,7 +6,7 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 22:08:03 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/04/26 22:29:11 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2024/05/01 16:24:44 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,6 @@ size_t	ft_strlen(const char *s)
 	while (s[i] != 0)
 		i++;
 	return (i);
-}
-
-int	ft_printstr(char *str)
-{
-	if (!str)
-		return (write(1, "(null)", 6));
-	return (write(1, str, ft_strlen(str)));
 }
 
 int	ft_printnbr(int nbr)

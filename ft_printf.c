@@ -6,7 +6,7 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 22:08:03 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/04/26 22:28:35 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2024/05/01 16:02:10 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ int	ft_printf(const char *format, ...)
 			return (-1);
 		i++;
 	}
+	va_end(args);
 	return (printed_chars);
 }
 
